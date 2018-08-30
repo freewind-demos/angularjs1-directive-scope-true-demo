@@ -1,13 +1,14 @@
 const app = angular.module('app', [])
 app.controller('myController', function ($scope) {
-    $scope.hello = 'hello myController'
+    $scope.controllerName = '(myController)'
 })
 app.directive('myDirective', function () {
     return {
         restrict: 'A',
         scope: false,
         link: function (scope, element, attrs) {
-            console.log(scope.hello)
+            scope.message = 'message added by myDirective'
+            console.log('myDirective added message to scope of: ' + scope.controllerName)
         }
     }
 })
