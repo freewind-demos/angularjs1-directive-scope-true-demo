@@ -1,10 +1,13 @@
 AngularJS1 Directive Scope True Demo
 ====================================
 
-`scope`
--------
+```
+scope: true
+```
 
-- `true`: A new child scope that prototypically inherits from its parent will be created for the directive's element. If multiple directives on the same element request a new scope, only one new scope is created.
+有点像子类的继承：
+在directive中的修改就像是子类不会修改父类的定义，而是新增一个方法覆盖父类；
+如果只是读取，则直接引用父类中的方法。
 
 ```
 npm install

@@ -3,17 +3,12 @@
 </head>
 <body ng-app="app">
 <div ng-controller="myController">
-    <div my-directive>
-        <h2>Inside myDirective</h2>
-        <div>controllerName: {{ controllerName }}</div>
-        <div>message: {{ message }}</div>
-    </div>
+    <ul>
+        <li>{{ message1 }} <button ng-click="change()">Change from parent</button></li>
+        <li>{{ message2 }}</li>
+    </ul>
     <hr/>
-    <div>
-        <h2>Outside myDirective</h2>
-        <div>controllerName: {{ controllerName }}</div>
-        <div>message: {{ message }}</div>
-    </div>
+    <my-directive/>
 </div>
 <script src="./node_modules/angular/angular.js"></script>
 <script src="./app.js"></script>
