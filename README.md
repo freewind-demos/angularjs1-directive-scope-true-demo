@@ -1,7 +1,7 @@
-AngularJS1 Directive Link Demo
-==============================
+AngularJS1 Directive Scope False Demo
+=====================================
 
-Do some DOM operations in `link` function of directive.
+`scope`: `false` (default): No scope will be created for the directive. The directive will use its parent's scope.
 
 ```
 npm install
@@ -14,5 +14,5 @@ Resources
 ---------
 
 - AngularJS1: <https://angularjs.org/>
-- directive api: <https://docs.angularjs.org/api/ng/service/$compile#directive-definition-object>
+- directive scope api: <https://docs.angularjs.org/api/ng/service/$compile#-scope->
 - $element api: <https://docs.angularjs.org/api/ng/function/angular.element#angularjs-s-jqlite>

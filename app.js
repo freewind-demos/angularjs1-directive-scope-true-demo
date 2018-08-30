@@ -1,9 +1,13 @@
-const app = angular.module('app', []);
-app.directive('bgColor', function () {
+const app = angular.module('app', [])
+app.controller('myController', function ($scope) {
+    $scope.hello = 'hello myController'
+})
+app.directive('myDirective', function () {
     return {
         restrict: 'A',
+        scope: false,
         link: function (scope, element, attrs) {
-            element.css("background-color", attrs.bgColor)
+            console.log(scope.hello)
         }
     }
-});
+})
